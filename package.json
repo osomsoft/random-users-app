@@ -5,7 +5,9 @@
   "main": "src/index.js",
   "scripts": {
     "lint": "eslint",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack",
+    "start": "webpack-dev-server --watch"
   },
   "author": "Carlos Azaustre <cazaustre@gmail.com> (https://carlosazaustre.es/)",
   "license": "MIT",
@@ -34,7 +36,7 @@
       "git add"
     ]
   },
-  "browserlist": {
+  "browserslist": {
     "production": [
       ">0.2%",
       "not dead",
@@ -45,5 +47,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "dependencies": {
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
   }
 }
