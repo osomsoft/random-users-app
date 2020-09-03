@@ -7,7 +7,8 @@
     "lint": "eslint",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack",
-    "start": "webpack-dev-server --watch"
+    "start": "webpack-dev-server --watch",
+    "server": "node -r esm server/index.js"
   },
   "author": "Carlos Azaustre <cazaustre@gmail.com> (https://carlosazaustre.es/)",
   "license": "MIT",
@@ -24,8 +25,10 @@
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-react": "^7.20.6",
     "eslint-plugin-standard": "^4.0.1",
+    "esm": "^3.2.25",
     "husky": "^4.2.5",
     "lint-staged": "^10.3.0",
+    "nodemon": "^2.0.2",
     "webpack": "^4.44.1",
     "webpack-cli": "^3.3.12",
     "webpack-dev-server": "^3.11.0"
@@ -49,6 +52,7 @@
     ]
   },
   "dependencies": {
+    "express": "^4.17.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1"
   }
