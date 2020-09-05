@@ -1,10 +1,28 @@
-import React from 'react'
-import ReactDOM from 'react-dom'
+import React, { useContext, useEffect } from 'react';
+import axios from 'axios';
 
-function App () {
+import { UserContext } from './context';
+import Header from './components/Header';
+import UsersList from './components/UsersList';
+
+function App () {  
+  const { addUsers } = useContext(UserContext);
+
+  useEffect(() => {
+    axios
+      .get('http://localhost:3000/users')
+      .then((response) => {
+        addUsers(response.data.results)
+      });
+  }, []);
+
+
   return (
-    <h1>Hello React!</h1>
+    <div>
+      <Header />
+      <UsersList />
+    </div>
   );
 }
 
-ReactDOM.render(<App />, document.getElementById('root'))
+export default App;
