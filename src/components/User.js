@@ -8,8 +8,8 @@ export default function User({
   picture,
 }) {
   return (
-    <div>
-      <div>
+    <div className="random-user">
+      <div className="user-image">
         <img src={picture.medium} alt={name.first} />
       </div>
       <div><strong>Name: </strong> {name.first} {name.last}</div>
