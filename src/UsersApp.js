@@ -7,7 +7,7 @@ import UsersList from './components/UsersList';
 
 import './css/styles.css';
 
-function App () {  
+export default function UsersApp () {  
   const { addUsers } = useContext(UserContext);
 
   useEffect(() => {
@@ -18,7 +18,6 @@ function App () {
       });
   }, []);
 
-
   return (
     <div>
       <Header />
@@ -26,5 +25,3 @@ function App () {
     </div>
   );
 }
-
-export default App;

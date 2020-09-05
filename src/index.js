@@ -1,12 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import App from './App';
+import UsersApp from './UsersApp';
 import { UserProvider } from './context';
 
 ReactDOM.render(
   <UserProvider>
-    <App />
+    <UsersApp />
   </UserProvider>,
   document.getElementById('root')
 );
