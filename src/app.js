@@ -12,7 +12,7 @@ function App () {
 
   useEffect(() => {
     axios
-      .get('http://localhost:3000/users')
+      .get('/users')
       .then((response) => {
         addUsers(response.data.results)
       });
